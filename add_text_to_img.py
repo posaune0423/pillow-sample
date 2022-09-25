@@ -10,7 +10,7 @@ img = Image.open(object)
 image_size = img.size
 draw = ImageDraw.Draw(img)
 
-font = ImageFont.truetype("Arial Unicode.ttf", 64)
+font = ImageFont.truetype("./fonts/Times.ttf", 64)
 size = font.getsize(text)
 
 
