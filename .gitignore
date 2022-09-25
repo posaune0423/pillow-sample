@@ -3,4 +3,4 @@ node_modules
 .build
 config/.env.dev
 swagger/
-Footer
+*/__pycache__
