@@ -28,6 +28,7 @@ def generate_img(event, context):
 
     # return response
     body = {
+        "code": 200,
         "msg": "Successfully generate and save image",
         "path": result,
     }
