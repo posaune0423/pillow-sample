@@ -1,6 +1,15 @@
 # pillow-sample
 
+## How to run local server
 
 ```bash
-python add_text_to_img.py ./img/background.jpg SomeTextHere
+yarn serve
+```
+
+## How to test image generate
+
+Run below
+
+```bash
+yarn generate ${some_text_you_want_insert}
 ```

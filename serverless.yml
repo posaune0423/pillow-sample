@@ -19,13 +19,6 @@ package:
     - .git/**
 
 functions:
-  hello:
-    handler: src/handler.hello
-    events:
-      - http:
-          path: hello
-          method: get
-          cors: true
   generate_img:
     handler: src/handler.generate_img
     events:

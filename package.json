@@ -1,7 +1,8 @@
 {
   "scripts": {
     "serve": "env-cmd -f config/.env.dev sls offline start --httpPort 5002",
-    "deploy": "sls deploy"
+    "deploy": "sls deploy",
+    "generate": "python scripts/generate.py"
   },
   "devDependencies": {
     "serverless-offline": "^10.2.1",

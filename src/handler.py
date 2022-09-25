@@ -4,17 +4,6 @@ from .aws.uploader import Uploader
 from .utils.image_helper import generate
 
 
-def hello(event, context):
-    body = {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "input": event,
-    }
-
-    response = {"statusCode": 200, "body": json.dumps(body)}
-
-    return response
-
-
 def generate_img(event, context):
     PROFILE = os.environ["AWS_PROFILE"]
     BUCKET_NAME = os.environ["AWS_S3_BUCKET_NAME"]
