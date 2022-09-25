@@ -19,12 +19,7 @@ class Uploader:
         destination = "test/" + filename
         obj = bucket.Object(destination)
         if is_key_exist(obj):
-            body = {
-                "code": 400,
-                "msg": "The file already exists in the requested path",
-            }
-
-            return {"statusCode": 400, "body": json.dumps(body)}
+            return False
         else:
             try:
                 bucket.upload_file(img_path, destination)

@@ -28,12 +28,19 @@ def generate_img(event, context):
 
     # upload image to s3
     filename = "image_" + text + ".png"
-    destination = uploader.upload(filename, img_path)
+    result = uploader.upload(filename, img_path)
+    if result == False:
+        body = {
+            "code": 400,
+            "msg": "The file already exists in the requested path",
+        }
+
+        return {"statusCode": 400, "body": json.dumps(body)}
 
     # return response
     body = {
         "msg": "Successfully generate and save image",
-        "path": destination,
+        "path": result,
     }
 
     response = {"statusCode": 200, "body": json.dumps(body)}
