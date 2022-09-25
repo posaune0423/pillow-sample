@@ -1,10 +1,8 @@
 from PIL import Image, ImageDraw, ImageFont
 
-def generate(text):
+def generate(text, color="red"):
     object = "./img/background.jpg"
-
     img = Image.open(object)
-
     image_size = img.size
     draw = ImageDraw.Draw(img)
 
@@ -15,7 +13,7 @@ def generate(text):
         ((image_size[0] - size[0]) / 2, (image_size[1] - size[1]) / 2),
         text,
         font=font,
-        fill="red",
+        fill=color,
     )
 
     out_path = "out.png"

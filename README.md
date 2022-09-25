@@ -11,5 +11,5 @@ yarn serve
 Run below
 
 ```bash
-yarn generate ${some_text_you_want_insert}
+python src/utils/generate.py ${some_text_you_want_insert}
 ```
