@@ -1,0 +1,28 @@
+service: serverless-ts-template
+frameworkVersion: "3"
+
+custom:
+  stage: "${opt:stage, sls:stage}"
+  defaultRegion: ap-northeast-1
+
+provider:
+  name: aws
+  runtime: python3.9
+  lambdaHashingVersion: 20201221
+
+plugins:
+  - serverless-offline
+  - serverless-python-requirements
+
+package:
+  exclude:
+    - .git/**
+
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+          cors: true

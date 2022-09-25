@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "serve": "env-cmd -f config/.env.dev sls offline start --httpPort 5002",
+    "deploy": "sls deploy"
+  },
+  "devDependencies": {
+    "serverless-offline": "^10.2.1",
+    "serverless-python-requirements": "^5.4.0"
+  }
+}
