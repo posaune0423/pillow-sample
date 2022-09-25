@@ -26,3 +26,10 @@ functions:
           path: hello
           method: get
           cors: true
+  generate_img:
+    handler: src/handler.generate_img
+    events:
+      - http:
+          path: generate_img/{id}
+          method: post
+          cors: true
