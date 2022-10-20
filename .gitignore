@@ -4,4 +4,5 @@ node_modules
 config/.env.dev
 swagger/
 */__pycache__
+**/*.pyc
 out.png
